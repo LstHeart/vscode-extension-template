@@ -1,42 +1,31 @@
-# vscode-extension-template
+# vscode-template
 
-VSCode插件开发模板项目
+[![Version](https://img.shields.io/visual-studio-marketplace/v/dennis.vscode-template)](https://marketplace.visualstudio.com/items?itemName=dennis.vscode-template) [![Installs](https://img.shields.io/visual-studio-marketplace/i/dennis.vscode-template](https://marketplace.visualstudio.com/items?itemName=dennis.vscode-template)) [![Reactive VSCode](https://img.shields.io/badge/Reactive-VSCode-%23007ACC?style=flat&labelColor=%23229863)](https://kermanx.github.io/reactive-vscode/)
 
-### Feature
-- webpack 打包压缩 VSCode Extension
-- husky 约束 commit 规范
-- standard-version 自动更新版本并修改 Changelog
-- github action 自动发布插件到 VSCode Marketplace,同步 Relase 版本
+A VS Code extension created with [Reactive VS Code](https://kermanx.github.io/reactive-vscode/).
 
+## Directory Structure
 
-### 打包发布常用操作
+* `package.json` - this is the manifest file in which you declare your extension and command.
+* `src/index.ts` - this is the main file where you write your extension.
 
-- 安装 VSCE
+## Get started
 
-```bash
-npm install -g vsce
-```
+* Open this repository in VS Code.
+* Run `pnpm install` to install the dependencies.
+* Run `pnpm dev` to compile the extension and watch for changes.
+* Press `F5` to open a new window with your extension loaded.
+* Run your command from the command palette by pressing (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) and typing `Hello World`.
+* Set breakpoints in your code inside `src/index.ts` to debug your extension.
+* Find output from your extension in the debug console.
 
-- 登录插件中心
-```bash
-vsce login lstheart
-```
-> 获取Token: https://dev.azure.com/
+## Make changes
 
-- 发布插件
-```bash
-vsce publish
-```
-- 打包插件
-```bash
-vsce package
-```
+* You can relaunch the extension from the debug toolbar after changing code in `src/index.ts`.
+* You can also reload (`Ctrl+R` or `Cmd+R` on Mac) the VS Code window with your extension to load your changes.
 
-### Github Action 说明
+## Go further
 
-> 版本发布需手动执行 action,可自行调整 `publish-extension.yml`
-
-启用 Github Action 后需设定项目 Actions Secrets
-- `USER_NAME`               用户名
-- `USER_EMAIL`              用户邮箱
-- `VS_MARKETPLACE_TOKEN`    VSCode Token
+* [Follow UX guidelines](https://code.visualstudio.com/api/ux-guidelines/overview) to create extensions that seamlessly integrate with VS Code's native interface and patterns.
+* [Publish your extension](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) on the VS Code extension marketplace.
+* Automate builds by setting up [Continuous Integration](https://code.visualstudio.com/api/working-with-extensions/continuous-integration).

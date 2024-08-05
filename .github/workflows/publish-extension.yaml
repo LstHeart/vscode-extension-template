@@ -35,18 +35,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 14.x
-          cache: 'yarn'
+          cache: 'pnpm'
 
       - name: Install Dependencies
         run: |
           git config user.email ${{ secrets.USER_EMAIL }}
           git config user.name ${{ secrets.USER_NAME }}
-          yarn install
+          pnpm install
 
       - if: github.event.inputs.releaseVersion!=''
-        run: yarn release --release-as ${{github.event.inputs.releaseVersion}}
+        run: pnpm release --release-as ${{github.event.inputs.releaseVersion}}
       - if: github.event.inputs.releaseVersion==''
-        run: yarn release
+        run: pnpm release
 
       - name: Get Release Tag
         id: tag
@@ -66,7 +66,7 @@ jobs:
           version: ${{ steps.tag.outputs.release_tag }}
 
       - name: Package Extension
-        run: yarn package
+        run: pnpm package
 
       - name: Release Extension
         uses: softprops/action-gh-release@v1

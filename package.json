@@ -3,7 +3,7 @@
   "name": "vscode-template",
   "displayName": "vscode-template",
   "type": "commonjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "categories": [
     "Other"

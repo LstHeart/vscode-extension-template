@@ -4,3 +4,10 @@
 node_modules
 !node_modules/**/*.js
 !node_modules/**/*.json
+scripts/**
+src/**
+pnpm-lock.yaml
+eslint.config.js
+tsup.config.ts
+tsconfig.json
+.gitignore
